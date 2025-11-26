@@ -14,12 +14,12 @@ class CuentaBancaria{
 
     public function retirar($cantidad){
         ($cantidad > 0 && $this->saldo >= $cantidad) 
-            ?   $this->saldo -= $cantidad && $retirado = $cantidad
-            :   $retirado = 0;
-        return $retirado;
+            ?   $this->saldo -= $cantidad 
+            :   $cantidad = 0;
+        return $cantidad;
     }
 }
 
 $cuenta1=new CuentaBancaria();
-echo "Cantidad depositada: " . $cuenta1->depositar(200) . "€. <br> El saldo de la cuenta es: " . $cuenta1->getSaldo() . "€. <br> Cantidad retirada: " . $cuenta1->retirar(220) . "€. <br>
-El saldo actual es: " . $cuenta1->getSaldo() . "€.";
+echo "Cantidad depositada: " . $cuenta1->depositar(200) . "€ <br> El saldo de la cuenta es: " . $cuenta1->getSaldo() . "€ <br> Cantidad retirada: " . $cuenta1->retirar(190) . "€ <br>
+El saldo actual es: " . $cuenta1->getSaldo() . "€";

@@ -16,9 +16,11 @@ class Persona{
         $this->setNombre($name);
         $this->setEdad($age);
     }
+    
+    public function mostrarInfo($x){
+        echo "Persona $x: " . $this->nombre . ", tiene " . $this->edad . " años de edad.<br>"; 
+    }
 }
 
 $persona1 = new Persona("Laura Gómez", 35);
-echo "<h3>Persona 1 Creada</h3>";
-echo "Nombre: " . $persona1->setNombre("") . "<br>";
-echo "Edad: " . $persona1->setEdad(115) . "<br>";
+$persona1->mostrarInfo(1);
